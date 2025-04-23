@@ -1,5 +1,5 @@
 {
-  "timeline_index": 180,
+  "timeline_index": 182,
   "planner": {
     "Team Leader": {
       "1": {
@@ -276,7 +276,7 @@
     "143": 1,
     "144": 1,
     "145": 1,
-    "146": 0,
+    "146": 1,
     "147": 1,
     "149": 1,
     "150": 1,
@@ -300,19 +300,23 @@
     "177": 1,
     "178": 1,
     "179": 0,
-    "180": 1
+    "180": 1,
+    "181": 1,
+    "182": 1
   },
   "preview_servers": {
     "03292249-2250-4a76-994e-3f70c382e762": {
       "role": "Alex",
-      "port": 5174,
+      "port": 5173,
       "subdomain": "drl-second-hand-price-prediction-xs75vd-p6wyr-82e762",
       "server": "02740e22-8331-44f4-b3da-879ae00a6d10",
       "cmd": "pnpm run dev",
       "timeline_index": 179,
-      "status": "success",
+      "status": "initializing",
       "logs": []
     }
   },
-  "deploy": {}
+  "deploy": {
+    "proj_name": "drl-second-hand-price-prediction-cjwzpi"
+  }
 }
