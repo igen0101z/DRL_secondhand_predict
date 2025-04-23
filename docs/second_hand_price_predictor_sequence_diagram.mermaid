@@ -1,0 +1,78 @@
+sequenceDiagram
+    participant User
+    participant FE as FrontendApp
+    participant API as APIController
+    participant PS as PricePredictionService
+    participant US as UserService
+    participant DC as DataCollector
+    participant DRL as DRLModel
+    participant DB as DatabaseHandler
+    participant EBAY as EbayAPIClient
+    
+    %% 使用者登入流程
+    User->>FE: 輸入登入資訊
+    FE->>API: login_user(credentials)
+    API->>US: authenticate_user(credentials)
+    US->>DB: 驗證用戶憑據
+    DB-->>US: 返回驗證結果與用戶資料
+    US-->>API: 返回身份驗證令牌
+    API-->>FE: 返回登入響應
+    FE-->>User: 顯示登入成功/失敗
+    
+    %% 系統初始化流程
+    Note over FE,EBAY: 系統啟動初始化
+    API->>DC: schedule_data_collection()
+    DC->>EBAY: 獲取類別信息與熱門商品數據
+    EBAY-->>DC: 返回初始數據
+    DC->>DB: save_market_trends(market_data)
+    DB-->>DC: 確認保存成功
+    DC->>DRL: update_model(new_data)
+    DRL-->>DC: 模型更新完成
+    
+    %% 用戶提交商品分析請求
+    User->>FE: 提交商品信息(名稱、類別、描述、圖片等)
+    FE->>API: predict_price(request_data)
+    API->>PS: predict_optimal_price(item_data, user_preferences)
+    
+    %% 數據收集和特徵提取
+    PS->>DC: get_similar_items_data(item_properties)
+    DC->>EBAY: search_items(keywords, category_id, filters)
+    EBAY-->>DC: 返回相似商品清單
+    DC->>EBAY: get_item_price_history(item_ids)
+    EBAY-->>DC: 返回價格歷史數據
+    DC->>DB: save_item_data(collected_data)
+    DB-->>DC: 確認保存成功
+    DC-->>PS: 返回處理後的市場數據
+    
+    %% 特徵提取和價格預測
+    PS->>PS: extract_features(item_data, market_data)
+    PS->>DRL: predict(item_features, market_state)
+    DRL->>DRL: 執行深度強化學習推理
+    DRL-->>PS: 返回最佳定價策略
+    
+    %% 預測結果處理
+    PS->>PS: generate_price_distribution(prediction_result)
+    PS->>DB: cache_prediction_result(item_id, prediction)
+    DB-->>PS: 確認緩存成功
+    PS-->>API: 返回定價預測與市場分析
+    API-->>FE: 返回完整分析結果
+    FE-->>User: 展示定價建議與市場分析
+    
+    %% 用戶選擇接受定價建議
+    User->>FE: 確認採用建議價格
+    FE->>API: save_item(item_data_with_price)
+    API->>US: save_user_item(user_id, item_data)
+    US->>DB: update_item_price(item_id, price)
+    DB-->>US: 確認更新成功
+    US-->>API: 返回保存結果
+    API-->>FE: 返回操作狀態
+    FE-->>User: 顯示成功訊息
+    
+    %% 系統學習與改進
+    Note over DRL,DB: 定期模型更新流程
+    DC->>DB: get_prediction_accuracy_data()
+    DB-->>DC: 返回預測vs實際價格數據
+    DC->>DRL: train(training_data, epochs)
+    DRL->>DRL: 更新模型權重
+    DRL->>DB: save_model(path)
+    DB-->>DRL: 確認保存成功

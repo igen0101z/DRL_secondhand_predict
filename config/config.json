@@ -1,0 +1,86 @@
+{
+    "api": {
+        "ebay": {
+            "app_id": "YOUR_EBAY_APP_ID",
+            "cert_id": "YOUR_EBAY_CERT_ID",
+            "dev_id": "YOUR_EBAY_DEV_ID",
+            "client_secret": "YOUR_EBAY_CLIENT_SECRET",
+            "ru_name": "YOUR_EBAY_RU_NAME",
+            "sandbox_mode": true,
+            "rate_limits": {
+                "calls_per_second": 5,
+                "calls_per_day": 5000
+            }
+        }
+    },
+    "database": {
+        "mongo": {
+            "uri": "mongodb://localhost:27017/",
+            "db_name": "ebay_price_prediction"
+        },
+        "redis": {
+            "host": "localhost",
+            "port": 6379,
+            "db": 0,
+            "cache_ttl": 3600
+        }
+    },
+    "model": {
+        "drl": {
+            "model_type": "dqn",
+            "learning_rate": 0.001,
+            "discount_factor": 0.95,
+            "exploration_rate": 0.1,
+            "target_update_frequency": 1000,
+            "batch_size": 64,
+            "memory_size": 10000,
+            "num_hidden_layers": 3,
+            "hidden_layer_size": 128,
+            "activation": "relu"
+        },
+        "reward_function": {
+            "profit_weight": 0.7,
+            "time_weight": 0.3
+        },
+        "state_features": [
+            "item_condition",
+            "brand_popularity",
+            "season_demand",
+            "market_saturation",
+            "avg_price",
+            "price_std",
+            "time_on_market",
+            "conversion_rate"
+        ]
+    },
+    "data": {
+        "categories": [
+            {
+                "id": "9355",
+                "name": "Laptops & Netbooks"
+            },
+            {
+                "id": "15032",
+                "name": "Cell Phones & Smartphones"
+            },
+            {
+                "id": "11450",
+                "name": "Wristwatch"
+            },
+            {
+                "id": "261007",
+                "name": "Digital Cameras"
+            }
+        ],
+        "sample_size_per_category": 100,
+        "min_items_for_training": 500,
+        "history_window": 30,
+        "update_frequency": 24
+    },
+    "logging": {
+        "level": "INFO",
+        "file_path": "/data/chats/p6wyr/workspace/logs/app.log",
+        "rotation": "1 day",
+        "retention": "30 days"
+    }
+}

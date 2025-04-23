@@ -1,0 +1,163 @@
+classDiagram
+    class EbayAPIClient {
+        -api_key: str
+        -api_secret: str
+        -connection_pool: ConnectionPool
+        +__init__(api_key: str, api_secret: str)
+        +get_item_details(item_id: str) -> dict
+        +search_items(keywords: str, category_id: str, filters: dict) -> List[dict]
+        +get_item_price_history(item_id: str) -> List[dict]
+        +get_similar_items(item_id: str) -> List[dict]
+        +get_category_info(category_id: str) -> dict
+    }
+    
+    class DataCollector {
+        -api_client: EbayAPIClient
+        -db_handler: DatabaseHandler
+        -data_preprocessor: DataPreprocessor
+        +__init__(api_client: EbayAPIClient, db_handler: DatabaseHandler)
+        +collect_category_data(category_id: str, sample_size: int) -> bool
+        +collect_item_history(item_id: str) -> dict
+        +update_market_trends(category_id: str) -> dict
+        +schedule_data_collection(schedule_config: dict) -> bool
+        +get_similar_items_data(item_properties: dict) -> List[dict]
+    }
+    
+    class DataPreprocessor {
+        -feature_extractor: FeatureExtractor
+        +__init__(feature_config: dict)
+        +clean_data(raw_data: List[dict]) -> List[dict]
+        +normalize_features(features: dict) -> dict
+        +handle_missing_values(data: dict) -> dict
+        +encode_categorical_features(data: dict) -> dict
+        +generate_time_series_features(history_data: List[dict]) -> List[dict]
+    }
+    
+    class FeatureExtractor {
+        -feature_config: dict
+        +__init__(feature_config: dict)
+        +extract_item_features(item_data: dict) -> dict
+        +extract_market_features(market_data: List[dict]) -> dict
+        +extract_temporal_features(history_data: List[dict]) -> dict
+        +combine_features(item_features: dict, market_features: dict, temporal_features: dict) -> dict
+    }
+    
+    class DatabaseHandler {
+        -mongo_client: MongoClient
+        -mysql_connection: MySQLConnection
+        -redis_client: RedisClient
+        +__init__(mongo_uri: str, mysql_config: dict, redis_config: dict)
+        +save_item_data(item_data: dict) -> str
+        +save_market_trends(market_data: dict) -> str
+        +get_item_by_id(item_id: str) -> dict
+        +get_similar_items(item_properties: dict) -> List[dict]
+        +update_item_price(item_id: str, new_price: float) -> bool
+        +get_user_items(user_id: str) -> List[dict]
+        +cache_prediction_result(item_id: str, prediction: dict) -> bool
+        +get_cached_prediction(item_id: str) -> dict
+    }
+    
+    class DRLModel {
+        -model_config: dict
+        -model: RL_Model
+        -environment: MarketEnvironment
+        -optimizer: Optimizer
+        +__init__(model_config: dict)
+        +train(training_data: List[dict], epochs: int) -> dict
+        +predict(item_features: dict, market_state: dict) -> dict
+        +update_model(new_data: List[dict]) -> bool
+        +evaluate_model(test_data: List[dict]) -> dict
+        +save_model(path: str) -> bool
+        +load_model(path: str) -> bool
+        +get_model_insights(item_features: dict) -> dict
+    }
+    
+    class MarketEnvironment {
+        -reward_function: RewardFunction
+        -state_encoder: StateEncoder
+        -transition_model: TransitionModel
+        +__init__(config: dict)
+        +reset() -> dict
+        +step(action: float) -> Tuple[dict, float, bool, dict]
+        +set_market_state(market_data: dict) -> None
+        +get_state() -> dict
+        +calculate_reward(action: float, market_response: dict) -> float
+        +is_done(state: dict) -> bool
+    }
+    
+    class PricePredictionService {
+        -model: DRLModel
+        -data_collector: DataCollector
+        -feature_extractor: FeatureExtractor
+        -db_handler: DatabaseHandler
+        +__init__(model: DRLModel, data_collector: DataCollector, db_handler: DatabaseHandler)
+        +predict_optimal_price(item_data: dict, user_preferences: dict) -> dict
+        +get_price_distribution(item_data: dict) -> dict
+        +get_price_trend(category_id: str, timeframe: str) -> dict
+        +explain_prediction(prediction_id: str) -> dict
+        +track_prediction_accuracy(prediction_id: str, actual_price: float) -> float
+    }
+    
+    class UserService {
+        -db_handler: DatabaseHandler
+        -auth_provider: AuthProvider
+        +__init__(db_handler: DatabaseHandler, auth_provider: AuthProvider)
+        +register_user(user_data: dict) -> str
+        +authenticate_user(credentials: dict) -> str
+        +get_user_profile(user_id: str) -> dict
+        +update_user_preferences(user_id: str, preferences: dict) -> bool
+        +get_user_history(user_id: str) -> List[dict]
+        +save_user_item(user_id: str, item_data: dict) -> str
+    }
+    
+    class APIController {
+        -price_service: PricePredictionService
+        -user_service: UserService
+        -data_collector: DataCollector
+        +__init__(price_service: PricePredictionService, user_service: UserService, data_collector: DataCollector)
+        +predict_price(request_data: dict) -> Response
+        +get_market_analysis(request_data: dict) -> Response
+        +get_user_items(user_id: str) -> Response
+        +save_item(request_data: dict) -> Response
+        +register_user(request_data: dict) -> Response
+        +login_user(request_data: dict) -> Response
+    }
+    
+    class FrontendApp {
+        -api_client: APIClient
+        +__init__(api_url: str)
+        +render_dashboard() -> Component
+        +render_item_analysis_page(item_data: dict) -> Component
+        +render_history_page(user_id: str) -> Component
+        +render_settings_page(user_id: str) -> Component
+        +handle_item_submission(item_data: dict) -> Response
+        +handle_user_login(credentials: dict) -> Response
+    }
+    
+    class ScheduledTaskManager {
+        -scheduler: TaskScheduler
+        -data_collector: DataCollector
+        -model: DRLModel
+        +__init__(scheduler: TaskScheduler, data_collector: DataCollector, model: DRLModel)
+        +schedule_data_collection() -> None
+        +schedule_model_update() -> None
+        +schedule_cache_cleanup() -> None
+        +handle_failed_tasks(task_id: str, error: Exception) -> None
+    }
+    
+    EbayAPIClient -- DataCollector : 提供API訪問
+    DataCollector -- DataPreprocessor : 使用
+    DataPreprocessor -- FeatureExtractor : 使用
+    DataCollector -- DatabaseHandler : 存儲數據
+    DRLModel -- MarketEnvironment : 使用環境模擬
+    PricePredictionService -- DRLModel : 使用模型
+    PricePredictionService -- DataCollector : 獲取數據
+    PricePredictionService -- FeatureExtractor : 特徵提取
+    PricePredictionService -- DatabaseHandler : 存取結果
+    UserService -- DatabaseHandler : 使用
+    APIController -- PricePredictionService : 調用
+    APIController -- UserService : 調用
+    APIController -- DataCollector : 調用
+    FrontendApp -- APIController : 發送請求
+    ScheduledTaskManager -- DataCollector : 調度收集
+    ScheduledTaskManager -- DRLModel : 調度更新
