@@ -313,10 +313,21 @@
       "cmd": "pnpm run dev",
       "timeline_index": 179,
       "status": "initializing",
-      "logs": []
+      "logs": [
+        "\n",
+        "\n",
+        "> react-template@0.0.0 dev /data/chats/p6wyr/workspace/react_template\n",
+        "> vite\n",
+        "\n",
+        "\n",
+        "  VITE v5.4.3  ready in 316 ms\n",
+        "\n"
+      ]
     }
   },
   "deploy": {
-    "proj_name": "drl-second-hand-price-prediction-cjwzpi"
+    "proj_name": "",
+    "version": 1,
+    "deploy_url": "https://drl-second-hand-price-prediction-cjwzpi-v1.mgx.world"
   }
 }

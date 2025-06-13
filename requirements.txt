@@ -1,24 +1,29 @@
+# 基本依賴
+numpy
+pandas
+scikit-learn
+requests
+tqdm
+matplotlib
 
-# API and Web
-requests>=2.28.1
-ebaysdk>=2.2.0
+# 深度學習/強化學習
+torch
+# 如需GPU支援可改為 torch==<適用版本>+cu118
 
-# Data processing
-pandas>=1.5.0
-numpy>=1.23.3
-scikit-learn>=1.1.2
-dask>=2023.3.0
+# 強化學習環境
+gym
 
-# Deep learning
-torch>=1.13.0
-gym>=0.26.2
-stable-baselines3>=1.7.0
+# Web/前端互動（如有API或Flask服務）
+flask
 
-# Database
-pymongo>=4.3.2
-redis>=4.3.4
+# 其他工具
+# 若有用到 Jupyter Notebook
+# jupyter
 
-# Utilities
-schedule>=1.1.0
-python-dotenv>=0.21.0
-tqdm>=4.64.1
+# 日誌與開發工具
+# loguru
+
+# Windows/跨平台相容性
+# colorama
+
+# 請依實際專案需求增減

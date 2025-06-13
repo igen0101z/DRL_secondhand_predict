@@ -1,0 +1,10 @@
+{
+    "features_extracted": 6,
+    "categories_processed": 2,
+    "start_time": "2025-05-18T22:23:33.534212",
+    "end_time": "2025-05-18T22:23:33.553686",
+    "category_stats": {
+        "category_1": {
+            "active_price_mean": 125.0,
+            "active_price_std": 35.35533905932738,
+            "active_price_min": 

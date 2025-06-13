@@ -1,0 +1,9 @@
+{
+    "category_id": "11450",
+    "category_name": "Wristwatch",
+    "timestamp": "2025-05-19T13:27:45.051795",
+    "active_items_count": 50,
+    "sold_items_count": 50,
+    "active_items_file": "data/raw\\category_11450\\active_items_20250519_132745.csv",
+    "sold_items_file": "data/raw\\category_11450\\sold_items_20250519_132745.csv"
+}

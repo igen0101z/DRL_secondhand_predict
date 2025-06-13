@@ -1,0 +1,9 @@
+{
+    "category_id": "220",
+    "category_name": "Bicycles",
+    "timestamp": "2025-05-20T01:03:18.107538",
+    "active_items_count": 50,
+    "sold_items_count": 50,
+    "active_items_file": "data/raw\\category_220\\active_items_20250520_010318.csv",
+    "sold_items_file": "data/raw\\category_220\\sold_items_20250520_010318.csv"
+}

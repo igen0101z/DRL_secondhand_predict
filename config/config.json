@@ -1,11 +1,11 @@
 {
     "api": {
         "ebay": {
-            "app_id": "YOUR_EBAY_APP_ID",
-            "cert_id": "YOUR_EBAY_CERT_ID",
-            "dev_id": "YOUR_EBAY_DEV_ID",
-            "client_secret": "YOUR_EBAY_CLIENT_SECRET",
-            "ru_name": "YOUR_EBAY_RU_NAME",
+            "app_id": "",
+            "cert_id": "",
+            "dev_id": "",
+            "client_secret": "",
+            "ru_name": "",
             "sandbox_mode": true,
             "rate_limits": {
                 "calls_per_second": 5,
@@ -70,6 +70,70 @@
             {
                 "id": "261007",
                 "name": "Digital Cameras"
+            },
+            {
+                "id": "20081",
+                "name": "Tablets & eReaders"
+            },
+            {
+                "id": "139971",
+                "name": "Video Game Consoles"
+            },
+            {
+                "id": "175672",
+                "name": "Headphones"
+            },
+            {
+                "id": "11700",
+                "name": "Computer Components"
+            },
+            {
+                "id": "3676",
+                "name": "TV, Video & Audio"
+            },
+            {
+                "id": "293",
+                "name": "Books & Magazines"
+            },
+            {
+                "id": "15724",
+                "name": "Clothing & Accessories"
+            },
+            {
+                "id": "11116",
+                "name": "Toys & Games"
+            },
+            {
+                "id": "619",
+                "name": "Musical Instruments"
+            },
+            {
+                "id": "888",
+                "name": "Sporting Goods"
+            },
+            {
+                "id": "26395",
+                "name": "Home Appliances"
+            },
+            {
+                "id": "14308",
+                "name": "Furniture"
+            },
+            {
+                "id": "550",
+                "name": "Art & Collectibles"
+            },
+            {
+                "id": "2984",
+                "name": "Jewelry"
+            },
+            {
+                "id": "1249",
+                "name": "Tools & Workshop Equipment"
+            },
+            {
+                "id": "220",
+                "name": "Bicycles"
             }
         ],
         "sample_size_per_category": 100,
@@ -79,7 +143,7 @@
     },
     "logging": {
         "level": "INFO",
-        "file_path": "/data/chats/p6wyr/workspace/logs/app.log",
+        "file_path": "/logs/app.log",
         "rotation": "1 day",
         "retention": "30 days"
     }

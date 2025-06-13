@@ -16,20 +16,18 @@ class EbayPricePredictionPipeline:
     """
     Main driver class that integrates all components of the eBay second-hand item price prediction system
     """
-    def __init__(self, config_path: str = "/data/chats/p6wyr/workspace/config/config.json"):
+    def __init__(self, config_path: str = "config/config.json"):
         """Initialize the pipeline with configuration"""
         self.logger = Logger().get_logger()
         self.logger.info("Initializing eBay Price Prediction Pipeline")
-        
         # Load configuration
         self.config_path = config_path
         self._load_config()
-        
         # Initialize components
         self.ebay_client = None  # Initialize later to avoid unnecessary token fetching
         self.data_collector = None
         self.data_preprocessor = DataPreprocessor(config_path=config_path)
-        self.feature_extractor = FeatureExtractor(config_path=config_path)
+        self.feature_extractor = FeatureExtractor(config=config_path)
     
     def _load_config(self) -> None:
         """Load configuration from file"""
@@ -78,7 +76,14 @@ class EbayPricePredictionPipeline:
     def run_feature_extraction(self) -> Dict:
         """Run the feature extraction process"""
         self.logger.info("Starting feature extraction")
-        stats = self.feature_extractor.extract_all_features()
+        # 獲取預處理後的資料
+        preprocessed_data = self.data_preprocessor.get_preprocessed_data()
+        if not preprocessed_data:
+            self.logger.error("No preprocessed data available for feature extraction")
+            return {"error": "No preprocessed data available"}
+        
+        # 傳遞預處理後的資料給特徵萃取器
+        stats = self.feature_extractor.extract_all_features(preprocessed_data)
         return stats
     
     async def run_complete_pipeline(self, categories: Optional[List[Dict]] = None) -> Dict:
@@ -121,7 +126,7 @@ class EbayPricePredictionPipeline:
 async def main():
     """Main entry point for the application"""
     parser = argparse.ArgumentParser(description='eBay Second-hand Item Price Prediction System')
-    parser.add_argument('--config', type=str, default="/data/chats/p6wyr/workspace/config/config.json", 
+    parser.add_argument('--config', type=str, default="config/config.json", 
                         help='Path to configuration file')
     parser.add_argument('--mode', type=str, choices=['collect', 'preprocess', 'extract', 'full'], 
                         default='full', help='Operation mode')
@@ -165,7 +170,11 @@ async def main():
     
     return stats
 
-# For Jupyter notebook environment
-print("Starting eBay Price Prediction Pipeline")
-pipeline_stats = await main()  # Use await directly in Jupyter
-print(f"Pipeline completed with {pipeline_stats.get('collection', {}).get('items_collected', 0)} items collected")
+if __name__ == "__main__":
+    print("Starting eBay Price Prediction Pipeline")
+    import asyncio
+    pipeline_stats = asyncio.run(main())
+    if pipeline_stats is not None:
+        print(f"Pipeline completed with {pipeline_stats.get('collection', {}).get('items_collected', 0)} items collected")
+    else:
+        print("Pipeline completed, but未取得 pipeline_stats，請檢查錯誤日誌。")

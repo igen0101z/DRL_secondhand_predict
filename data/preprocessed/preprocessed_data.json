@@ -1,0 +1,44 @@
+{
+    "category_1": {
+        "active_items": [
+            {
+                "id": "item1",
+                "price": 100,
+                "condition": "new"
+            },
+            {
+                "id": "item2",
+                "price": 150,
+                "condition": "used"
+            }
+        ],
+        "sold_items": [
+            {
+                "id": "item3",
+                "price": 90,
+                "condition": "used"
+            },
+            {
+                "id": "item4",
+                "price": 120,
+                "condition": "new"
+            }
+        ]
+    },
+    "category_2": {
+        "active_items": [
+            {
+                "id": "item5",
+                "price": 200,
+                "condition": "new"
+            }
+        ],
+        "sold_items": [
+            {
+                "id": "item6",
+                "price": 180,
+                "condition": "used"
+            }
+        ]
+    }
+}

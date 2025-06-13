@@ -1,0 +1,9 @@
+{
+    "category_id": "550",
+    "category_name": "Art & Collectibles",
+    "timestamp": "2025-05-21T14:12:56.306921",
+    "active_items_count": 50,
+    "sold_items_count": 50,
+    "active_items_file": "data/raw\\category_550\\active_items_20250521_141256.csv",
+    "sold_items_file": "data/raw\\category_550\\sold_items_20250521_141256.csv"
+}

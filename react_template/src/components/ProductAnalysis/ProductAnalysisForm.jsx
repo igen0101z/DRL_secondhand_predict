@@ -81,17 +81,25 @@ const ProductAnalysisForm = () => {
       // Create a local preview
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImagePreview(reader.result);
+        setImagePreview(reader.result); // For local preview
+        setFormData(prev => ({ // Store base64 string for persistence
+          ...prev,
+          imageUrl: reader.result
+        }));
       };
       reader.readAsDataURL(file);
 
+      // Simulate upload process if needed, but we use base64 for imageUrl
+      await uploadProductImage(file);
+
       // In a real app, this would upload to a server
-      const imageUrl = await uploadProductImage(file);
-      
-      setFormData(prev => ({
-        ...prev,
-        imageUrl
-      }));
+      // For this mock, we are using the base64 string from FileReader as the imageUrl
+      // const imageUrl = await uploadProductImage(file); 
+      // The actual setting of imageUrl will happen in reader.onloadend
+      // setFormData(prev => ({
+      //   ...prev,
+      //   imageUrl
+      // }));
     } catch (error) {
       console.error('Image upload error:', error);
       setError('圖片上傳失敗，請稍後再試');
@@ -131,7 +139,7 @@ const ProductAnalysisForm = () => {
         suggestedPrice: result.recommendedPrice,
         marketPrice: result.marketAveragePrice,
         analysisDate: result.analysisDate,
-        imageUrl: formData.imageUrl || null,
+        imageUrl: formData.imageUrl, // This will now be a base64 string or empty
         analysisResults: result
       });
 

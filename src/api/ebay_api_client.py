@@ -12,7 +12,7 @@ class EbayAPIClient:
     """
     Client for interacting with eBay API for data collection
     """
-    def __init__(self, config_path: str = "/data/chats/p6wyr/workspace/config/config.json"):
+    def __init__(self, config_path: str = "/config/config.json"):
         """
         Initialize the eBay API client with configuration
         
@@ -53,7 +53,7 @@ class EbayAPIClient:
         self.token_expiry = None
         
         # Cache directory for API responses
-        self.cache_dir = "/data/chats/p6wyr/workspace/data/cache/api_responses"
+        self.cache_dir = "data/cache/api_responses"
         os.makedirs(self.cache_dir, exist_ok=True)
         
     def _load_config(self, config_path: str) -> Dict:
@@ -191,6 +191,8 @@ class EbayAPIClient:
             cache_ttl (int): Cache TTL in seconds
         """
         cache_file = os.path.join(self.cache_dir, f"{cache_key}.json")
+        # 新增：自動建立快取檔案的資料夾
+        os.makedirs(os.path.dirname(cache_file), exist_ok=True)
         try:
             cached_data = {
                 'data': data,

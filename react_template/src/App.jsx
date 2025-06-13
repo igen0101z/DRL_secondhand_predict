@@ -10,6 +10,7 @@ import PricePrediction from './components/ProductAnalysis/PricePrediction';
 import MarketAnalysis from './components/ProductAnalysis/MarketAnalysis';
 import HistoryPage from './components/History/HistoryPage';
 import SettingsPage from './components/Settings/SettingsPage';
+import DRLTrainingPage from './components/Dashboard/DRLTrainingPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                   <Route path="/market-analysis/:id" element={<MarketAnalysis />} />
                   <Route path="/history" element={<HistoryPage />} />
                   <Route path="/settings" element={<SettingsPage />} />
+                  <Route path="/drl-training" element={<DRLTrainingPage />} />
                 </Routes>
               </div>
             </main>

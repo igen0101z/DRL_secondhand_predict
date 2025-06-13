@@ -1,0 +1,36 @@
+{
+    "features_extracted": 6,
+    "categories_processed": 2,
+    "start_time": "2025-05-18T22:24:52.055253",
+    "end_time": "2025-05-18T22:24:52.066812",
+    "category_stats": {
+        "category_1": {
+            "active_price_mean": 125.0,
+            "active_price_std": 35.35533905932738,
+            "active_price_min": 100,
+            "active_price_max": 150,
+            "active_count": 2,
+            "sold_price_mean": 105.0,
+            "sold_price_std": 21.213203435596427,
+            "sold_price_min": 90,
+            "sold_price_max": 120,
+            "sold_count": 2,
+            "price_diff_mean": 20.0,
+            "price_ratio": 1.1904761904761905
+        },
+        "category_2": {
+            "active_price_mean": 200.0,
+            "active_price_std": NaN,
+            "active_price_min": 200,
+            "active_price_max": 200,
+            "active_count": 1,
+            "sold_price_mean": 180.0,
+            "sold_price_std": NaN,
+            "sold_price_min": 180,
+            "sold_price_max": 180,
+            "sold_count": 1,
+            "price_diff_mean": 20.0,
+            "price_ratio": 1.1111111111111112
+        }
+    }
+}

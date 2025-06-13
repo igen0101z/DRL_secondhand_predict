@@ -17,7 +17,7 @@
                 {
                     "name": "RunCommand",
                     "i_context": "",
-                    "prefix": "\n The current date in Los Angeles is 2025-04-23.You are a Team Leader, named Mike, your goal is Manage a team to assist users. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n\nYour team member:\nMike: Team Leader, Manage a team to assist users\nEmma: Product Manager, Analyze user needs, create a PRD or Product Research report (including competitive analysis, market research) after collecting information and data online.\nBob: Architect, Design a concise, usable, complete software system. Output the system design.\nAlex: Engineer, Take on game, app, web development and deployment.\nDavid: Data Analyst, Take on any data-related tasks, such as data analysis, machine learning, deep learning, web browsing, web scraping, web searching, terminal operation, document QA & analysis, etc.\n\n",
+                    "prefix": "\n The current date in Los Angeles is 2025-05-18.You are a Team Leader, named Mike, your goal is Manage a team to assist users. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n\nYour team member:\nMike: Team Leader, Manage a team to assist users\nEmma: Product Manager, Analyze user needs, create a PRD or Product Research report (including competitive analysis, market research) after collecting information and data online.\nBob: Architect, Design a concise, usable, complete software system. Output the system design.\nAlex: Engineer, Take on game, app, web development and deployment.\nDavid: Data Analyst, Take on any data-related tasks, such as data analysis, machine learning, deep learning, web browsing, web scraping, web searching, terminal operation, document QA & analysis, etc.\n\n",
                     "desc": "",
                     "__module_class_name": "metagpt.actions.di.run_command.RunCommand"
                 }
@@ -70,8 +70,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -122,8 +122,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -200,9 +200,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -241,8 +241,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -254,8 +254,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -267,8 +267,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -294,8 +294,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -307,8 +307,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -334,8 +334,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -426,9 +426,9 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "David",
                                     "Alex",
-                                    "<all>"
+                                    "<all>",
+                                    "David"
                                 ],
                                 "metadata": {}
                             },
@@ -453,8 +453,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -466,8 +466,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -479,8 +479,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -492,8 +492,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -505,8 +505,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -518,8 +518,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             }
@@ -545,8 +545,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "Emma",
-                                    "<all>"
+                                    "<all>",
+                                    "Emma"
                                 ],
                                 "metadata": {}
                             },
@@ -585,8 +585,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -737,8 +737,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -789,8 +789,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -867,9 +867,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -908,8 +908,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -921,8 +921,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -934,8 +934,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -961,8 +961,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -974,8 +974,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1001,8 +1001,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1224,7 +1224,7 @@
                 {
                     "name": "RunCommand",
                     "i_context": "",
-                    "prefix": " The current date in Los Angeles is 2025-04-23.You are a Product Manager, named Emma, your goal is Analyze user needs, create a PRD or Product Research report (including competitive analysis, market research) after collecting information and data online.. the constraint is utilize the same language as the user requirements for seamless communication. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
+                    "prefix": " The current date in Los Angeles is 2025-05-18.You are a Product Manager, named Emma, your goal is Analyze user needs, create a PRD or Product Research report (including competitive analysis, market research) after collecting information and data online.. the constraint is utilize the same language as the user requirements for seamless communication. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
                     "desc": "",
                     "__module_class_name": "metagpt.actions.di.run_command.RunCommand"
                 }
@@ -1253,8 +1253,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -1473,8 +1473,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1527,9 +1527,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -1568,8 +1568,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1581,8 +1581,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1594,8 +1594,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1621,8 +1621,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1634,8 +1634,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1661,8 +1661,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1813,9 +1813,9 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "David",
                                     "Alex",
-                                    "<all>"
+                                    "<all>",
+                                    "David"
                                 ],
                                 "metadata": {}
                             },
@@ -1840,8 +1840,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -1853,8 +1853,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -1866,8 +1866,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -1879,8 +1879,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -1892,8 +1892,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -1905,8 +1905,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             }
@@ -1920,8 +1920,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "Emma",
-                                    "<all>"
+                                    "<all>",
+                                    "Emma"
                                 ],
                                 "metadata": {}
                             },
@@ -2044,8 +2044,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -2160,8 +2160,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -2380,8 +2380,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2434,9 +2434,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -2475,8 +2475,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2488,8 +2488,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2501,8 +2501,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2528,8 +2528,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2541,8 +2541,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2568,8 +2568,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2792,7 +2792,7 @@
                 {
                     "name": "WriteDesign",
                     "i_context": null,
-                    "prefix": " The current date in Los Angeles is 2025-04-23.You are a Architect, named Bob, your goal is Design a concise, usable, complete software system. Output the system design.. the constraint is Make sure the architecture is simple enough and use appropriate open source libraries. Use same language as user requirement. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
+                    "prefix": " The current date in Los Angeles is 2025-05-18.You are a Architect, named Bob, your goal is Design a concise, usable, complete software system. Output the system design.. the constraint is Make sure the architecture is simple enough and use appropriate open source libraries. Use same language as user requirement. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
                     "desc": "Based on the PRD, think about the system design, and design the corresponding APIs, data structures, library tables, processes, and paths. Please provide your design, feedback clearly and in detail.",
                     "__module_class_name": "metagpt.actions.design_api.WriteDesign"
                 }
@@ -2821,8 +2821,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -2849,8 +2849,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3047,9 +3047,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -3088,8 +3088,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3101,8 +3101,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3114,8 +3114,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3153,8 +3153,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3166,8 +3166,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3193,8 +3193,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3321,9 +3321,9 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "David",
                                     "Alex",
-                                    "<all>"
+                                    "<all>",
+                                    "David"
                                 ],
                                 "metadata": {}
                             },
@@ -3348,8 +3348,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -3361,8 +3361,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -3374,8 +3374,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -3387,8 +3387,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -3400,8 +3400,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -3413,8 +3413,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             }
@@ -3428,8 +3428,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "Emma",
-                                    "<all>"
+                                    "<all>",
+                                    "Emma"
                                 ],
                                 "metadata": {}
                             },
@@ -3456,8 +3456,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -3656,8 +3656,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -3684,8 +3684,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3882,9 +3882,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -3923,8 +3923,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3936,8 +3936,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3949,8 +3949,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -3988,8 +3988,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -4001,8 +4001,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -4028,8 +4028,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -4066,8 +4066,8 @@
                 "max_react_loop": 50
             },
             "addresses": [
-                "metagpt.roles.architect.Architect",
-                "Bob"
+                "Bob",
+                "metagpt.roles.architect.Architect"
             ],
             "planner": {
                 "plan": {
@@ -4227,7 +4227,7 @@
                 {
                     "name": "RunCommand",
                     "i_context": "",
-                    "prefix": " The current date in Los Angeles is 2025-04-23.You are a Engineer, named Alex, your goal is Take on game, app, web development and deployment.. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
+                    "prefix": " The current date in Los Angeles is 2025-05-18.You are a Engineer, named Alex, your goal is Take on game, app, web development and deployment.. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
                     "desc": "",
                     "__module_class_name": "metagpt.actions.di.run_command.RunCommand"
                 }
@@ -4256,8 +4256,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -4284,8 +4284,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -4338,9 +4338,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -4823,8 +4823,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -5316,8 +5316,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -5353,8 +5353,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -5476,8 +5476,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -5561,8 +5561,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -5732,8 +5732,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -5884,9 +5884,9 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "David",
                                     "Alex",
-                                    "<all>"
+                                    "<all>",
+                                    "David"
                                 ],
                                 "metadata": {}
                             },
@@ -6127,8 +6127,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -6380,8 +6380,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -6405,8 +6405,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -6466,8 +6466,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -6515,8 +6515,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -6600,8 +6600,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -6663,8 +6663,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "Emma",
-                                    "<all>"
+                                    "<all>",
+                                    "Emma"
                                 ],
                                 "metadata": {}
                             },
@@ -6691,8 +6691,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -7602,8 +7602,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -7750,7 +7750,7 @@
             ],
             "planner": {
                 "plan": {
-                    "goal": "[Message] from User to Alex: @Alex I have confirmed on the page. Please deploy this project to public with the `project_name` 'drl-second-hand-price-prediction-cjwzpi'.",
+                    "goal": "",
                     "context": "",
                     "tasks": [],
                     "task_map": {},
@@ -8162,7 +8162,7 @@
                 {
                     "name": "RunCommand",
                     "i_context": "",
-                    "prefix": " The current date in Los Angeles is 2025-04-23.You are a Data Analyst, named David, your goal is Take on any data-related tasks, such as data analysis, machine learning, deep learning, web browsing, web scraping, web searching, terminal operation, document QA & analysis, etc.. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
+                    "prefix": " The current date in Los Angeles is 2025-05-18.You are a Data Analyst, named David, your goal is Take on any data-related tasks, such as data analysis, machine learning, deep learning, web browsing, web scraping, web searching, terminal operation, document QA & analysis, etc.. \nYou are a member of the MetaGPTX (MGX) team providing software development services on MGX platform.\nIf the request is outside your team members' capabilities such as mini programs, iOS/Android apps, desktop programs, embedded systems, operating systems, etc., tell them you can currently develop web page and can provide a web page demo based on the requirement.\nOtherwise, you MUST respond to the user message by yourself directly, DON'T ask your team members. \n",
                     "desc": "",
                     "__module_class_name": "metagpt.actions.di.run_command.RunCommand"
                 }
@@ -8191,8 +8191,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "Emma",
-                                "<all>"
+                                "<all>",
+                                "Emma"
                             ],
                             "metadata": {}
                         },
@@ -8219,8 +8219,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -8897,9 +8897,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -8960,8 +8960,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -8973,8 +8973,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -8986,8 +8986,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -9013,8 +9013,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -9026,8 +9026,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -9053,8 +9053,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -9421,9 +9421,9 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "David",
                                     "Alex",
-                                    "<all>"
+                                    "<all>",
+                                    "David"
                                 ],
                                 "metadata": {}
                             },
@@ -9472,8 +9472,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -9485,8 +9485,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -9498,8 +9498,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -9511,8 +9511,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -9524,8 +9524,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -9537,8 +9537,8 @@
                                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                                 "sent_from": "",
                                 "send_to": [
-                                    "<all>",
-                                    "Alex"
+                                    "Alex",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             }
@@ -9552,8 +9552,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "Emma",
-                                    "<all>"
+                                    "<all>",
+                                    "Emma"
                                 ],
                                 "metadata": {}
                             },
@@ -9580,8 +9580,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "Bob"
+                                    "Bob",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -10125,9 +10125,9 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "David",
                                 "Alex",
-                                "<all>"
+                                "<all>",
+                                "David"
                             ],
                             "metadata": {}
                         },
@@ -10188,8 +10188,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -10201,8 +10201,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -10214,8 +10214,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Bob"
+                                "Bob",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -10241,8 +10241,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -10254,8 +10254,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -10281,8 +10281,8 @@
                             "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                             "sent_from": "",
                             "send_to": [
-                                "<all>",
-                                "Alex"
+                                "Alex",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -10838,8 +10838,8 @@
                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                 "sent_from": "Mike",
                 "send_to": [
-                    "Emma",
-                    "<all>"
+                    "<all>",
+                    "Emma"
                 ],
                 "metadata": {}
             },
@@ -10851,8 +10851,8 @@
                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                 "sent_from": "Mike",
                 "send_to": [
-                    "Emma",
-                    "<all>"
+                    "<all>",
+                    "Emma"
                 ],
                 "metadata": {}
             },
@@ -10894,8 +10894,8 @@
                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                 "sent_from": "Mike",
                 "send_to": [
-                    "<all>",
-                    "Bob"
+                    "Bob",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -10907,8 +10907,8 @@
                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                 "sent_from": "Mike",
                 "send_to": [
-                    "<all>",
-                    "Bob"
+                    "Bob",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11002,9 +11002,9 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "David",
                     "Alex",
-                    "<all>"
+                    "<all>",
+                    "David"
                 ],
                 "metadata": {}
             },
@@ -11016,9 +11016,9 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "David",
                     "Alex",
-                    "<all>"
+                    "<all>",
+                    "David"
                 ],
                 "metadata": {}
             },
@@ -11084,8 +11084,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11097,8 +11097,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11110,8 +11110,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11123,8 +11123,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11136,8 +11136,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Bob"
+                    "Bob",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11149,8 +11149,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Bob"
+                    "Bob",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11190,8 +11190,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11203,8 +11203,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11216,8 +11216,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11229,8 +11229,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11270,8 +11270,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11283,8 +11283,8 @@
                 "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                 "sent_from": "",
                 "send_to": [
-                    "<all>",
-                    "Alex"
+                    "Alex",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -11379,9 +11379,9 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "David",
                         "Alex",
-                        "<all>"
+                        "<all>",
+                        "David"
                     ],
                     "metadata": {}
                 },
@@ -11393,9 +11393,9 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "David",
                         "Alex",
-                        "<all>"
+                        "<all>",
+                        "David"
                     ],
                     "metadata": {}
                 },
@@ -11433,8 +11433,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11446,8 +11446,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11459,8 +11459,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11472,8 +11472,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11485,8 +11485,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Bob"
+                        "Bob",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11498,8 +11498,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Bob"
+                        "Bob",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11511,8 +11511,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11524,8 +11524,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11537,8 +11537,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11550,8 +11550,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11563,8 +11563,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11576,8 +11576,8 @@
                     "cause_by": "metagpt.actions.add_requirement.UserRequirement",
                     "sent_from": "",
                     "send_to": [
-                        "<all>",
-                        "Alex"
+                        "Alex",
+                        "<all>"
                     ],
                     "metadata": {}
                 }
@@ -11591,8 +11591,8 @@
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
                     "sent_from": "Mike",
                     "send_to": [
-                        "Emma",
-                        "<all>"
+                        "<all>",
+                        "Emma"
                     ],
                     "metadata": {}
                 },
@@ -11604,8 +11604,8 @@
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
                     "sent_from": "Mike",
                     "send_to": [
-                        "Emma",
-                        "<all>"
+                        "<all>",
+                        "Emma"
                     ],
                     "metadata": {}
                 },
@@ -11647,8 +11647,8 @@
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
                     "sent_from": "Mike",
                     "send_to": [
-                        "<all>",
-                        "Bob"
+                        "Bob",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -11660,8 +11660,8 @@
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
                     "sent_from": "Mike",
                     "send_to": [
-                        "<all>",
-                        "Bob"
+                        "Bob",
+                        "<all>"
                     ],
                     "metadata": {}
                 },

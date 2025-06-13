@@ -1,0 +1,9 @@
+{
+    "category_id": "26395",
+    "category_name": "Home Appliances",
+    "timestamp": "2025-05-20T01:02:09.691741",
+    "active_items_count": 50,
+    "sold_items_count": 50,
+    "active_items_file": "data/raw\\category_26395\\active_items_20250520_010209.csv",
+    "sold_items_file": "data/raw\\category_26395\\sold_items_20250520_010209.csv"
+}

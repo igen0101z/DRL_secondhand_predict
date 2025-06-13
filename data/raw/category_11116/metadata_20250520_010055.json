@@ -1,0 +1,9 @@
+{
+    "category_id": "11116",
+    "category_name": "Toys & Games",
+    "timestamp": "2025-05-20T01:00:55.420836",
+    "active_items_count": 50,
+    "sold_items_count": 50,
+    "active_items_file": "data/raw\\category_11116\\active_items_20250520_010055.csv",
+    "sold_items_file": "data/raw\\category_11116\\sold_items_20250520_010055.csv"
+}

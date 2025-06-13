@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
 import { formatCurrency } from '../../utils/helpers';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const PricePrediction = () => {
   const { id } = useParams();
@@ -307,36 +308,23 @@ const PricePrediction = () => {
               {/* Price Distribution Chart */}
               <div className="mt-6">
                 <h3 className="text-sm font-medium text-gray-900 mb-3">市場價格分佈</h3>
-                <div className="h-32">
-                  {results.priceDistribution.map((range, index) => {
-                    // Calculate if current price falls within this range
-                    const isPriceInRange = 
-                      activeStrategy.price >= range.priceRange[0] && 
-                      activeStrategy.price < range.priceRange[1];
-                    
-                    // Calculate relative height based on count
-                    const maxCount = Math.max(...results.priceDistribution.map(r => r.count));
-                    const height = (range.count / maxCount) * 100;
-                    
-                    return (
-                      <div 
-                        key={index} 
-                        className="inline-block"
-                        style={{ width: `${100 / results.priceDistribution.length}%` }}
-                      >
-                        <div className="flex flex-col items-center">
-                          <div 
-                            className={`w-5/6 rounded-t-sm ${isPriceInRange ? 'bg-indigo-500' : 'bg-gray-200'}`}
-                            style={{ height: `${height}%` }}
-                          ></div>
-                          <span className="text-xs text-gray-500 mt-1">
-                            {formatCurrency(range.priceRange[0]).replace('NT$', '')}
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                  {results.marketPriceDistribution && results.marketPriceDistribution.length > 0 ? (
+                    <div style={{ width: '100%', height: 200 }} className="mt-2">
+                      <ResponsiveContainer>
+                        <BarChart data={results.marketPriceDistribution}>
+                          <CartesianGrid strokeDasharray="3 3" />
+                          <XAxis dataKey="price" tickFormatter={formatCurrency} />
+                          <YAxis />
+                          <Tooltip formatter={(value) => [value, '數量']} labelFormatter={formatCurrency} />
+                          <Legend formatter={() => '商品數量'} />
+                          <Bar dataKey="count" fill="#8884d8" name="商品數量" />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-500 mt-1">暫無市場價格分佈數據。</p>
+                  )}
+
               </div>
             </div>
             
